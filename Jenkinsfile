@@ -1,11 +1,25 @@
 pipeline {  
     agent any  
         stages {  
-       	    stage("git_checkout") {  
+       	    stage("build") {  
            	    steps {  
-              	    echo "cloning repository" 
-              	    echo "repo cloned successfully"  
-              	    }  
+              	    echo "building the application" 
+
+                    }  
+         	    } 
+             stage("test") {  
+           	    steps {  
+              	    echo "testing the application" 
+
+                    }  
+         	    } 
+             stage("deploying") {  
+           	    steps {  
+              	    echo "deploying the application" 
+
+                    }  
          	    } 
         }
+    
+    
 }
